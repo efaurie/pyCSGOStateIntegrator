@@ -1,9 +1,7 @@
-import BaseHTTPServer
+from BaseHTTPServer import BaseHTTPRequestHandler
 
 
-class StateServerHandler(BaseHTTPServer.BaseHTTPRequestHandler):
-    def __init__(self):
-        pass
+class StateServerHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         self.send_response(200)

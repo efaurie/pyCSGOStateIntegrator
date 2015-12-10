@@ -1,0 +1,69 @@
+provider:
+    name
+    appid
+    version
+    steamid
+    timestamp
+
+player (in menu):
+    steamid
+    name
+    activity (menu)
+
+player (in-game):
+    steamid
+    name
+    activity (playing)
+    state:
+        health
+        armor
+        helmet
+        flashed
+        smoked
+        burning
+        money
+        round_kills
+        round_killhs
+    weapons:
+        weapon_0:
+            name
+            paintkit
+            type
+            state (active/holstered)
+        weapon_1:
+            name
+            paintkit
+            type
+            ammo_clip
+            ammo_clip_max
+            ammo_reserve
+            state (active/holstered)
+    match_stats:
+        kills
+        assists
+        deaths
+        mvps
+        score
+
+map:
+    mode
+    name
+    phase
+    round
+    team_ct:
+        score
+    team_t
+        score
+
+round
+    phase
+
+previously:
+    player:
+        activity
+
+added:
+    player:
+        state
+        weapons
+        match_stats

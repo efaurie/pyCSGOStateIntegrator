@@ -1,13 +1,16 @@
+from CSGOState import CSGOState
 from BaseHTTPServer import BaseHTTPRequestHandler
 
 
 class StateServerHandler(BaseHTTPRequestHandler):
+    def __init__(self, *args):
+        self.state = CSGOState()
+        BaseHTTPRequestHandler.__init__(self, *args)
 
     def do_POST(self):
         self.send_response(200)
-        print 'Headers:\n\t' + self.headers
-        print '\nRequest:\n\t' + self.request
-        print '\nrFile:\n\t' + self.rfile
+        self.state.load_new_state(self.rfile)
+        self.state.print_state()
 
     def do_GET(self):
         self.not_allowed('GET')

@@ -10,7 +10,6 @@ class StateServer:
     def setup_server(bind_address, port):
         server_class = BaseHTTPServer.HTTPServer
         address = (bind_address, port)
-
         return server_class(address, StateServerHandler)
 
     def start_server(self):

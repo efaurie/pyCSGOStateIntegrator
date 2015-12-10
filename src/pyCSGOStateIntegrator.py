@@ -1,7 +1,7 @@
 import argparse
 
-from ConfigReader import ConfigReader
 from StateServer import StateServer
+from ConfigReader import ConfigReader
 
 
 def init_state_integrator():

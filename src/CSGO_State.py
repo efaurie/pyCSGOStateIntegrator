@@ -3,9 +3,12 @@ import json
 
 class CSGOState:
     def __init__(self):
+        self.last_csgo_state = None
         self.csgo_state = dict()
 
     def load_new_state(self, json_payload):
+        self.last_csgo_state = self.csgo_state
+        self.csgo_state = dict()
         new_state = json.load(json_payload)
         self.parse_state(new_state)
 
@@ -27,4 +30,3 @@ class CSGOState:
                 pass
             print '[+] {0}: '.format(state_class.split('_')[1])
             print state.as_string
-            print '\n'

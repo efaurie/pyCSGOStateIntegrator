@@ -12,7 +12,7 @@ class CSGOState:
     def parse_state(self, new_state):
         for state_class, payload in new_state.iteritems():
             try:
-                state_class_name = state_class.capitalize()
+                state_class_name = 'State_{0}'.format(state_class.capitalize())
                 module = __import__(state_class_name)
                 state_class = getattr(module, state_class_name)
                 state_instance = state_class()
@@ -23,6 +23,8 @@ class CSGOState:
 
     def print_state(self):
         for state_class, state in self.csgo_state.iteritems():
-            print '[+] {0}: '.format(state_class)
+            if state is None:
+                pass
+            print '[+] {0}: '.format(state_class.split('_')[1])
             print state.as_string
             print '\n'

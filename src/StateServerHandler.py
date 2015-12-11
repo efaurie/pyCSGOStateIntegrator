@@ -1,4 +1,4 @@
-from CSGOState import CSGOState
+from CSGO_State import CSGOState
 from BaseHTTPServer import BaseHTTPRequestHandler
 
 

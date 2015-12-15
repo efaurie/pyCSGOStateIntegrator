@@ -141,29 +141,31 @@ class State_Player:
     def as_string(self):
         state = ''
         if self.steamid is not None:
-            state += 'Steam ID: ' + self.steamid
+            state += '\tSteam ID: ' + self.steamid
         if self.name is not None:
-            state += '\nName: ' + self.name
+            state += '\n\tName: ' + self.name
         if self.team is not None:
-            state += '\nTeam: ' + self.team
+            state += '\n\tTeam: ' + self.team
         if self.activity is not None:
-            state += '\nActivity: ' + self.activity
+            state += '\n\tActivity: ' + self.activity
         if self.health is not None:
-            state += '\nHealth: ' + str(self.health)
+            state += '\n\tHealth: ' + str(self.health)
         if self.armor is not None:
-            state += '\nArmor: ' + str(self.armor)
+            state += '\n\tArmor: ' + str(self.armor)
         if self.helmet is not None:
-            state += '\nHelmet: ' + str(self.helmet)
+            state += '\n\tHelmet: ' + str(self.helmet)
         if self.flashed is not None:
-            state += '\nFlashed: ' + str(self.flashed)
+            state += '\n\tFlashed: ' + str(self.flashed)
         if self.smoked is not None:
-            state += '\nSmoked: ' + str(self.smoked)
+            state += '\n\tSmoked: ' + str(self.smoked)
         if self.burning is not None:
-            state += '\nBurning: ' + str(self.burning)
+            state += '\n\tBurning: ' + str(self.burning)
         if self.money is not None:
-            state += '\nMoney: ' + str(self.money)
+            state += '\n\tMoney: ' + str(self.money)
         if self.round_kills is not None:
-            state += '\nRound Kills: ' + str(self.round_kills)
+            state += '\n\tRound Kills: ' + str(self.round_kills)
         if self.round_killhs is not None:
-            state += '\nRound Kills By Headshot: ' + str(self.round_killhs)
+            state += '\n\tRound Kills By Headshot: ' + str(self.round_killhs)
         state += self.state_weapons.as_string
+
+        return state

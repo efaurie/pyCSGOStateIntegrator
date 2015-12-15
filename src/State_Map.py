@@ -50,15 +50,17 @@ class State_Map:
         if self.mode is not None:
             state += '\tMode: ' + self.mode
         if self.name is not None:
-            state += '\tMap: ' + self.name
+            state += '\n\tMap: ' + self.name
         if self.phase is not None:
-            state += '\tPhase: ' + self.phase
+            state += '\n\tPhase: ' + self.phase
         if self.round is not None:
-            state += '\tRound: ' + str(self.round)
+            state += '\n\tRound: ' + str(self.round)
         if self.team_ct_score is not None:
-            state += '\tCT Score: ' + str(self.team_ct_score)
+            state += '\n\tCT Score: ' + str(self.team_ct_score)
         if self.team_t_score is not None:
-            state += '\tT Score: ' + str(self.team_t_score)
+            state += '\n\tT Score: ' + str(self.team_t_score)
+
+        return state
 
     def update(self, state_map):
         self.state_map = state_map

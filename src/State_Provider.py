@@ -53,5 +53,5 @@ class State_Provider:
             state += '\tSteam Id: {0}\n'.format(self.steamid)
         if self.timestamp is not None:
             state += '\tTimestamp: {0}\n'.format(self.timestamp)
-        return state
+        return state.rstrip()
 

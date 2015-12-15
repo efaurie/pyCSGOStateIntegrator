@@ -56,7 +56,7 @@ class Weapon:
 
     @property
     def as_string(self):
-        state = '\n'
+        state = ''
         if self.name is not None:
             state += '\n\t\tName: ' + self.name
         if self.paintkit is not None:
@@ -97,4 +97,5 @@ class State_Weapons:
         for weapon_slot, weapon in self.state_weapons.iteritems():
             state += '\n\t{0}: '.format(weapon_slot.capitalize())
             state += weapon.as_string
+
         return state

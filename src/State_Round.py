@@ -13,7 +13,9 @@ class State_Round:
     def as_string(self):
         state = ''
         if self.phase is not None:
-            state += 'Phase: ' + self.phase
+            state += '\tPhase: ' + self.phase
+
+        return state
 
     def update(self, state_round):
         self.state_round = state_round
